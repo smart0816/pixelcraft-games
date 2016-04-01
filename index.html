@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PixelCraft Games - Browser Game Collection</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <h1>🎮 PixelCraft Games</h1>
+        <p>Classic browser games built with HTML5 Canvas</p>
+    </header>
+
+    <main class="game-container">
+        <div class="game-selection">
+            <div class="game-card" data-game="snake">
+                <h3>🐍 Snake Game</h3>
+                <p>Classic snake game with modern controls</p>
+                <button class="play-btn">Play Now</button>
+            </div>
+            
+            <div class="game-card" data-game="pong">
+                <h3>🏓 Pong</h3>
+                <p>Retro ping pong game for two players</p>
+                <button class="play-btn">Play Now</button>
+            </div>
+            
+            <div class="game-card" data-game="tetris">
+                <h3>🧩 Tetris</h3>
+                <p>Block puzzle game with falling pieces</p>
+                <button class="play-btn">Play Now</button>
+            </div>
+        </div>
+
+        <div class="game-area" id="gameArea" style="display: none;">
+            <div class="game-header">
+                <h2 id="currentGameTitle">Game Title</h2>
+                <div class="game-controls">
+                    <button id="pauseBtn">Pause</button>
+                    <button id="restartBtn">Restart</button>
+                    <button id="backBtn">Back to Menu</button>
+                </div>
+            </div>
+            
+            <canvas id="gameCanvas" width="800" height="600"></canvas>
+            
+            <div class="game-info">
+                <div class="score">Score: <span id="score">0</span></div>
+                <div class="high-score">High Score: <span id="highScore">0</span></div>
+                <div class="level">Level: <span id="level">1</span></div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2016 PixelCraft Games. Built with HTML5 Canvas and JavaScript.</p>
+    </footer>
+
+    <script src="games/snake.js"></script>
+    <script src="games/pong.js"></script>
+    <script src="games/tetris.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
